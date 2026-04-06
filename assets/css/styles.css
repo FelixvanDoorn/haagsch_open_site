@@ -1,0 +1,279 @@
+/* HAAGSCH OPEN 2026 - Official Stylesheet 
+   Brand Identity: Koninklijke Haagsche G&CC (Heritage & Prestige)
+*/
+
+:root {
+    /* The "Haagsche" Palette */
+    --kh-navy: #152440;
+    /* Deep Royal Navy */
+    --kh-red: #8e191d;
+    /* Signature "Haagsche Rood" (Action & Prestige) */
+    --kh-gold: #b39156;
+    /* Muted Heritage Gold */
+    --kh-cream: #fdfcf8;
+    /* Paper-like off-white */
+    --kh-white: #ffffff;
+    --kh-text: #2d2d2d;
+    /* Dark charcoal for high readability */
+    --kh-border: #e0e0e0;
+    /* Soft dividers */
+}
+
+/* --- 1. Base Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--kh-white);
+    color: var(--kh-text);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- 2. Typography --- */
+h1 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-weight: 400;
+    color: var(--kh-red);
+    letter-spacing: 0.5px;
+}
+
+h2,
+h3,
+h4 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-weight: 400;
+    color: var(--kh-navy);
+    letter-spacing: 0.5px;
+}
+
+/* --- 3. Navigation --- */
+nav {
+    background-color: var(--kh-white);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--kh-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Georgia", serif;
+    font-size: 1.2rem;
+    color: var(--kh-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--kh-red);
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--kh-red);
+    /* Signature Red hover effect */
+}
+
+/* --- 4. Hero Section --- */
+.hero {
+    height: 75vh;
+    min-height: 550px;
+    background-color: var(--kh-navy);
+    background-image: linear-gradient(rgba(21, 36, 64, 0.55), rgba(21, 36, 64, 0.75)),
+        url('../images/haagsche_clubhuis_hero_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--kh-white);
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    color: var(--kh-white);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--kh-gold);
+    /* Gold accent under main title */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.hero p {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--kh-gold);
+    max-width: 700px;
+}
+
+/* --- 5. Content Layout --- */
+.section {
+    padding: 100px 10%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.4rem;
+}
+
+/* --- 6. The Details Grid --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+}
+
+.detail-card {
+    border-top: 1px solid var(--kh-border);
+    padding-top: 30px;
+}
+
+.detail-card h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--kh-gold);
+    /* Gold for labels */
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.detail-card p {
+    font-family: "Georgia", serif;
+    font-size: 1.2rem;
+    color: var(--kh-navy);
+}
+
+/* --- 7. Requirements Section --- */
+.requirements-container {
+    background-color: var(--kh-cream);
+    padding: 60px;
+    margin-top: 60px;
+    border-left: 4px solid var(--kh-red);
+    /* Subtle "Haagsche Rood" accent */
+}
+
+.requirements-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.requirements-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(179, 145, 86, 0.15);
+    font-size: 1.05rem;
+}
+
+/* --- 8. The Signup Section --- */
+.signup-section {
+    background-color: var(--kh-red);
+    color: var(--kh-white);
+    text-align: center;
+    padding: 120px 5%;
+}
+
+.signup-section h2 {
+    color: var(--kh-white);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Red Action Button */
+.btn-primary {
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: var(--kh-navy);
+    /* Signature Red for the main action */
+    color: var(--kh-white);
+    text-decoration: none;
+    font-family: "Georgia", serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid var(--kh-red);
+}
+
+.btn-primary:hover {
+    background-color: var(--kh-gold);
+    color: var(--kh-navy);
+    border-color: var(--kh-gold);
+    transform: translateY(-3px);
+}
+
+.deadline-text {
+    margin-top: 25px;
+    color: var(--kh-white);
+    font-family: "Georgia", serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* --- 9. Language Switcher UI --- */
+.lang-switch {
+    background: transparent;
+    border: 1px solid var(--kh-border);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.lang-switch:hover {
+    background: var(--kh-navy);
+    color: white;
+}
+
+/* --- 10. Footer --- */
+footer {
+    padding: 80px 5%;
+    background-color: var(--kh-white);
+    text-align: center;
+    border-top: 1px solid var(--kh-border);
+    color: #888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Helper classes for JS Toggle */
+.hidden {
+    display: none !important;
+}

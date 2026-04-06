@@ -1,0 +1,32 @@
+# --- OS Specific Files ---
+.DS_Store
+Thumbs.db
+*.swp
+Desktop.ini
+
+# --- Editor / IDE Settings ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# --- Local Environment / Secrets ---
+# (If you use a mailer or API keys later)
+.env
+*.log
+
+# --- Build Tools / Dependencies ---
+# (Even in vanilla, you might use Prettier or Sass)
+node_modules/
+.sass-cache/
+.parcel-cache/
+dist/
+build/
+
+# --- Documentation / Notes ---
+# (Keeps your personal research off the live repo)
+notes.txt
+todo.md
+temp/
