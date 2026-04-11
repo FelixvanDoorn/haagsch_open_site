@@ -148,7 +148,7 @@ nav {
 /* --- 5. Content Layout & Grid --- */
 .section {
     padding: 100px 5%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -212,6 +212,7 @@ nav {
     font-size: 1.05rem;
     margin-bottom: 8px;
     color: var(--kh-navy);
+    white-space: nowrap;
 }
 
 .info-list li::before {
