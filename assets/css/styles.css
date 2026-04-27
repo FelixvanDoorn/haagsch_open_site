@@ -163,6 +163,8 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     /* Standaard 3 kolommen op desktop */
     gap: 30px;
+    align-items: start;
+    /* Keeps cards from stretching vertically unevenly */
 }
 
 /* --- 6. The "Premium" Detail Cards --- */
@@ -175,6 +177,13 @@ nav {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+
+    /* Ensures the card respects the grid boundaries */
+    inline-size: 100%;
+    min-width: 0;
 }
 
 .detail-card:hover {
@@ -192,11 +201,20 @@ nav {
     padding-bottom: 12px;
 }
 
+.detail-card li {
+    white-space: normal;
+    /* Prevents text from staying on one line */
+    overflow-wrap: break-word;
+}
+
 .detail-card p {
     font-family: "Georgia", serif;
     font-size: 1.15rem;
     color: var(--kh-navy);
     margin-bottom: 12px;
+    white-space: normal;
+    /* Prevents text from staying on one line */
+    overflow-wrap: break-word;
 }
 
 /* --- 7. Consistent Lists (Holes, Cut, Field) --- */
@@ -212,7 +230,6 @@ nav {
     font-size: 1.05rem;
     margin-bottom: 4px;
     color: var(--kh-navy);
-    white-space: nowrap;
 }
 
 .info-list li::before {
