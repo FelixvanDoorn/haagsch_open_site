@@ -7,7 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Check if the user has visited before and picked a language
     // If not, default to Dutch ('nl')
-    const savedLang = localStorage.getItem('preferredLang') || 'nl'; s
+    const savedLang = localStorage.getItem('preferredLang') || 'nl';
 
     // Apply the language immediately on page load
     setLanguage(savedLang);

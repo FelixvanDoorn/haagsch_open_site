@@ -5,7 +5,7 @@
 :root {
     --kh-navy: #152440;
     /* Deep Royal Navy */
-    --kh-red: #8e191d;
+    --kh-red: #e31838;
     /* Haagsche Rood */
     --kh-gold: #b39156;
     /* Heritage Gold */
@@ -64,13 +64,67 @@ nav {
     z-index: 1000;
 }
 
-.logo {
+.logo-text {
     font-family: "Georgia", serif;
     font-size: 1.1rem;
     color: var(--kh-red);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
+}
+
+.logo-img {
+    height: 65px;
+    /* Adjust this height to fit your navbar design */
+    width: auto;
+    /* Prevents distortion by keeping the aspect ratio */
+    display: block;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-wrapper {
+    flex: 1;
+    /* Forces both sides to be equal width, keeping text perfectly centered */
+    display: flex;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    max-width: 120px;
+    /* Adjust based on your logo design */
+    height: auto;
+}
+
+/* Align the left logo to the left, and right logo to the right */
+.hero-content .logo-wrapper:first-child {
+    justify-content: flex-start;
+}
+
+.hero-content .logo-wrapper:last-child {
+    justify-content: flex-end;
+}
+
+/* Style and center the text content */
+.hero-text-container {
+    flex: 2;
+    /* Gives the text container more breathing room */
+    text-align: center;
+}
+
+.hero-text-container h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    /* Responsively scales font based on screen size */
+}
+
+.hero-text-container p {
+    margin: 0;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
 .nav-controls {
@@ -97,6 +151,10 @@ nav {
     letter-spacing: 1px;
 }
 
+navbar {
+    min-height: 200px;
+}
+
 .flags {
     display: flex;
     gap: 8px;
@@ -118,7 +176,9 @@ nav {
 /* --- 4. Hero Section --- */
 .hero {
     height: 70vh;
+    width: 100%;
     min-height: 500px;
+    box-sizing: border-box;
     background: linear-gradient(rgba(21, 36, 64, 0.55), rgba(21, 36, 64, 0.75)),
         url('../images/haagsche_clubhuis_hero_banner.jpg');
     background-size: cover;
@@ -127,7 +187,21 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 5%;
+    padding: 2rem 1rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    /* Perfect horizontal axis alignment */
+    align-items: center;
+    /* Pushes logos to the edges, text to center */
+    justify-content: space-between;
+    /* Lock elements seamlessly next to each other */
+    max-width: 1200px;
+    /* Caps the stretch on massive displays */
+    margin: 0 auto;
+    gap: 2rem;
 }
 
 .hero h1 {
@@ -144,6 +218,8 @@ nav {
     font-size: 1.5rem;
     color: var(--kh-gold);
 }
+
+
 
 /* --- 5. Content Layout & Grid --- */
 .section {
@@ -375,9 +451,26 @@ footer {
     .signup-section {
         padding: 60px 5%;
     }
+
+    .hero-content {
+        flex-direction: column;
+        /* Stacks them vertically on smaller screens */
+        gap: 1.5rem;
+    }
+
+    .hero-content .logo-wrapper:first-child,
+    .hero-content .logo-wrapper:last-child {
+        justify-content: center;
+        /* Centers logos when stacked */
+    }
 }
+
 
 /* Language toggle helper */
 .hidden {
     display: none !important;
+}
+
+.no-break {
+    white-space: nowrap;
 }
