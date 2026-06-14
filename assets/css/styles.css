@@ -452,17 +452,6 @@ footer {
         padding: 60px 5%;
     }
 
-    .hero-content {
-        flex-direction: column;
-        /* Stacks them vertically on smaller screens */
-        gap: 1.5rem;
-    }
-
-    .hero-content .logo-wrapper:first-child,
-    .hero-content .logo-wrapper:last-child {
-        justify-content: center;
-        /* Centers logos when stacked */
-    }
 }
 
 
